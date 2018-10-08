@@ -8,28 +8,19 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <description>这是所有JavaBean的存储</description>
-    <artifactId>gmall-bean</artifactId>
 
+    <artifactId>gmall-common</artifactId>
     <dependencies>
-        <!-- 依赖通用的工具类-->
         <dependency>
             <groupId>com.atguigu.gmall</groupId>
-            <artifactId>gmall-common</artifactId>
+            <artifactId>gmall-parent</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!-- 导入通用mapper -->
         <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>1.2.3</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-jdbc</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
     </dependencies>
+
 </project>
