@@ -6,7 +6,7 @@
 	<groupId>com.atguigu.gmall</groupId>
 	<artifactId>gmall-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>gmall-parent</name>
 	<description>父工程，用来进行以来管理</description>
