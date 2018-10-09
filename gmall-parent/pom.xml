@@ -20,8 +20,8 @@
 
 	<properties>
 		<fastjson.version>1.2.46</fastjson.version>
-		<dubbo-starter.version>1.0.10</dubbo-starter.version>
-		<dubbo.version>2.6.0</dubbo.version>
+		<dubbo-starter.version>0.1.1</dubbo-starter.version>
+		<dubbo.version>2.6.2</dubbo.version>
 		<zkclient.version>0.10</zkclient.version>
 		<mybatis.version>1.3.1</mybatis.version>
 		<nekohtml.version>1.9.20</nekohtml.version>
@@ -54,10 +54,15 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<!-- 被管理起来的依赖-->
+	<!--被管理起来的依赖，-->
 	<dependencyManagement>
-
 		<dependencies>
+
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis.plus.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
@@ -65,11 +70,10 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.alibaba.boot</groupId>
-				<artifactId>dubbo-spring-boot-starter</artifactId>
-				<version>${dubbo-starter.version}</version>
+				<groupId>com.alibaba</groupId>
+				<artifactId>dubbo</artifactId>
+				<version>${dubbo.version}</version>
 			</dependency>
-
 
 			<dependency>
 				<groupId>com.101tec</groupId>
@@ -77,11 +81,7 @@
 				<version>${zkclient.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>com.gitee.reger</groupId>
-				<artifactId>spring-boot-starter-dubbo</artifactId>
-				<version>${dubbo-starter.version}</version>
-			</dependency>
+
 
 			<dependency>
 				<groupId>org.mybatis.spring.boot</groupId>
@@ -160,10 +160,7 @@
 				<artifactId>commons-beanutils</artifactId>
 				<version>${beanUtils.version}</version>
 			</dependency>
-
-
 		</dependencies>
-
 
 	</dependencyManagement>
 
