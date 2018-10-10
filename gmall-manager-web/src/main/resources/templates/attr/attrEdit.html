@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="attrDlg" class="easyui-dialog" title="编辑属性" style="width:600px;height:500px;"
+         closed="true" data-options="iconCls:'icon-save',resizable:true,modal:true" buttons="#bb" >
+        <form id="attrForm">
+            <br/>
+            <label>属性名称:</label>
+            <input  id="attrName" name="attrName" class="easyui-textbox" data-options="" style="width:100px"/>
+            <input  id="attrId" name="attrId" type="hidden"  />
+            <br/><br/>
+            <!-- 平台属性值列表-->
+            <table id="attrInfoValueTable" class="easyui-datagrid" title="属性值列表">
+
+
+            </table>
+        </form>
+    </div>
+
+    <div id="bb">
+        <a href="#" class="easyui-linkbutton">保存</a>
+        <a href="#" class="easyui-linkbutton">关闭</a>
+    </div>
+
+</body>
+</html>
