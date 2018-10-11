@@ -19,4 +19,10 @@ public interface BaseAttrInfoService {
      * @return
      */
     public List<BaseAttrValue> getBaseAttrValueByAttrId(Integer AttrId);
+
+    /**
+     * 大型的增删改方法
+     * @param baseAttrInfo
+     */
+    public void saveOrUpdateBaseInfo(BaseAttrInfo baseAttrInfo);
 }

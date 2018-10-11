@@ -11,7 +11,8 @@
             <br/>
             <label>属性名称:</label>
             <input  id="attrName" name="attrName" class="easyui-textbox" data-options="" style="width:100px"/>
-            <input  id="attrId" name="attrId" type="hidden"  />
+            <input  id="attrId" name="id" type="hidden"  />
+
             <br/><br/>
             <!-- 平台属性值列表-->
             <table id="attrInfoValueTable" class="easyui-datagrid" title="属性值列表">
@@ -22,9 +23,72 @@
     </div>
 
     <div id="bb">
-        <a href="#" class="easyui-linkbutton">保存</a>
-        <a href="#" class="easyui-linkbutton">关闭</a>
+        <a href="#" class="easyui-linkbutton" onclick="saveAttrInfoAndValue()">保存</a>
+        <a href="#" class="easyui-linkbutton" onclick="$('#attrDlg').dialog('close')">关闭</a>
     </div>
+
+    <script language="javascript">
+        /*<![CDATA[*/
+        //保存属性名以及它的属性值：牵扯到增删改
+        function saveAttrInfoAndValue() {
+            //1、获取到页面的相关数据
+            //1、)获取基本属性的id，name
+            var attrInfoAndValue = {}
+            attrInfoAndValue.id =  $('#attrId').val();
+            attrInfoAndValue.attrName =  $('#attrName').textbox('getValue');
+            //-------------------------------------
+            //获取基本属性的所有值
+            attrInfoAndValue.attrValues = $('#attrInfoValueTable').datagrid('getRows');
+            //console.info(attrInfoAndValue);
+            //页面要提交的json数据给springmvc
+            //1、）将js对象转为json字符串
+            var jsonStr = JSON.stringify(attrInfoAndValue);
+            console.info(attrInfoAndValue);
+            //2、使用ajax异步提交
+            $.ajax({
+                url:'attr/updates',
+                type:'POST', //必须是post，在请求体中发送
+                contentType:'application/json',
+                data:jsonStr, //将json字符串发送到controller进行处理
+                processData:false,
+                success:function (data) {
+                   // alert(data);
+                    $('#attrDlg').dialog('close');
+                    //保存成功后刷新表格
+                    alert('保存成功!');
+                    refreshTable();
+
+
+                },
+                error:function () {
+                    alert("server bomb......");
+                }
+
+            })
+
+        }
+
+        var editIndex = undefined;
+        function endEditing(){
+            if (editIndex == undefined){return true}
+            if ($('#attrInfoValueTable').datagrid('validateRow', editIndex)){
+                $('#attrInfoValueTable').datagrid('endEdit', editIndex);
+                editIndex = undefined;
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function onClickCell(index, field){
+            if (endEditing()){
+                $('#attrInfoValueTable').datagrid('selectRow', index)
+                    .datagrid('editCell', {index:index,field:field});
+                editIndex = index;
+            }
+        }
+
+        /*]]>*/
+    </script>
 
 </body>
 </html>
