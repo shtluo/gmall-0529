@@ -58,6 +58,8 @@ public class ManagerController {
             //添加
             BaseAttrInfo baseAttrInfo = new BaseAttrInfo();
             baseAttrInfo.setAttrName(valueVO.getAttrName());
+            baseAttrInfo.setCatalog3Id(valueVO.getCatalog3Id());
+
             baseAttrInfoService.saveOrUpdateBaseInfo(baseAttrInfo);
 
         }

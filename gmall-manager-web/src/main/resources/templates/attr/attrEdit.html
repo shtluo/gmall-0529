@@ -37,6 +37,7 @@
             attrInfoAndValue.id =  $('#attrId').val();
             attrInfoAndValue.attrName =  $('#attrName').textbox('getValue');
             //-------------------------------------
+            attrInfoAndValue.catalog3Id = $("#ctg3ForAttrList").combobox('getValue');
             //获取基本属性的所有值
             attrInfoAndValue.attrValues = $('#attrInfoValueTable').datagrid('getRows');
             //console.info(attrInfoAndValue);
