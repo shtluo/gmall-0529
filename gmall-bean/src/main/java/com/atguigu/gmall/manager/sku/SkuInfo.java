@@ -1,14 +1,20 @@
 package com.atguigu.gmall.manager.sku;
 
 import com.atguigu.gmall.SuperBean;
+import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * Sku信息表
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SkuInfo extends SuperBean {
 
     //spu_id  price   sku_name  weight   tm_id  catalog3_id  sku_default_img
@@ -20,4 +26,13 @@ public class SkuInfo extends SuperBean {
     private Integer tmId;//品牌id
     private Integer catalog3Id;//三级分类id(冗余)
     private String skuDefaultImg;//sku默认图片路径（冗余）
+
+    @TableField(exist = false)
+    private List<SkuImage> skuImages; //sku的图片信息
+    @TableField(exist = false)
+    private List<SkuAttrValue> skuAttrValues; //sku的属性值信息
+    @TableField(exist = false)
+    private List<SkuSaleAttrValue> skuSaleAttrValues; //sku的销售属性值信息
+    @TableField(exist = false)
+    private List<SkuAllSaveAttrAndValueTo> skuAllSaveAttrAndValueTos;
 }

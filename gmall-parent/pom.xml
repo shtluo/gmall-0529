@@ -155,6 +155,7 @@
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/io.searchbox/jest -->
+
 			<dependency>
 				<groupId>io.searchbox</groupId>
 				<artifactId>jest</artifactId>

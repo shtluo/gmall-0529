@@ -5,9 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/gmall-bean/gmall-bean.iml" filepath="$PROJECT_DIR$/gmall-bean/gmall-bean.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-common/gmall-common.iml" filepath="$PROJECT_DIR$/gmall-common/gmall-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-interface/gmall-interface.iml" filepath="$PROJECT_DIR$/gmall-interface/gmall-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-item-web/gmall-item-web.iml" filepath="$PROJECT_DIR$/gmall-item-web/gmall-item-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-manager-service/gmall-manager-service.iml" filepath="$PROJECT_DIR$/gmall-manager-service/gmall-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-manager-web/gmall-manager-web.iml" filepath="$PROJECT_DIR$/gmall-manager-web/gmall-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-parent/gmall-parent.iml" filepath="$PROJECT_DIR$/gmall-parent/gmall-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-search-service/gmall-search-service.iml" filepath="$PROJECT_DIR$/gmall-search-service/gmall-search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-search-web/gmall-search-web.iml" filepath="$PROJECT_DIR$/gmall-search-web/gmall-search-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-serviceutil/gmall-serviceutil.iml" filepath="$PROJECT_DIR$/gmall-serviceutil/gmall-serviceutil.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-user-service/gmall-user-service.iml" filepath="$PROJECT_DIR$/gmall-user-service/gmall-user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-user-web/gmall-user-web.iml" filepath="$PROJECT_DIR$/gmall-user-web/gmall-user-web.iml" />

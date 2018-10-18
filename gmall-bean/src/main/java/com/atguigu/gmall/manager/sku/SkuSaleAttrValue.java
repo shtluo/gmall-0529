@@ -15,7 +15,7 @@ public class SkuSaleAttrValue extends SuperBean {
     private String saleAttrName;//销售属性的名字（冗余） ===【颜色】
 
     private Integer saleAttrValueId;//销售属性值id
-    private Integer saleAttrValueName;//销售属性值的名字  ====【红色】
+    private String saleAttrValueName;//销售属性值的名字  ====【红色】
 
 
 }
