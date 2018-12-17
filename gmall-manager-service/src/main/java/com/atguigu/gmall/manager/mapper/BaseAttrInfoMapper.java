@@ -14,4 +14,6 @@ public interface BaseAttrInfoMapper extends BaseMapper<BaseAttrInfo>{
      * @return
      */
     List<BaseAttrInfo> getBaseAttrInfoByCatalog3Id(Integer catalog3id);
+
+    List<BaseAttrInfo> getBaseAttrInfoGroupByValueId(@Param("valueIds")List<Integer> valueIds);
 }

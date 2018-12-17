@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/fastdfs-client-java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-bean" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-interface" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-item-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-manager-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-manager-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-parent" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-search-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-search-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-serviceutil" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-user-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-user-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-webutil" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/fastdfs-client-java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-bean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-cart-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-cart-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-item-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-manager-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-manager-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-order-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-order-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-passport-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-passport-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-search-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-serviceutil" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-user-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-user-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gmall-webutil" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/gware-manage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gmall0529/rabbitmq-demo" charset="UTF-8" />
   </component>
 </project>

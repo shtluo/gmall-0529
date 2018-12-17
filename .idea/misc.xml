@@ -3,13 +3,21 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-manager-service/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-manager-web/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-item-web/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-search-service/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-manager-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-manager-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-item-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-search-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-passport-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-passport-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-cart-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gmall-order-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/gware-manage/pom.xml" />
+        <option value="$PROJECT_DIR$/../gmall0529/rabbitmq-demo/pom.xml" />
       </list>
     </option>
   </component>

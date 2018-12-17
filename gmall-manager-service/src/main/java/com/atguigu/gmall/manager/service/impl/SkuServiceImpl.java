@@ -1,8 +1,10 @@
 package com.atguigu.gmall.manager.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSON;
 import com.atguigu.gmall.manager.BaseAttrInfo;
+import com.atguigu.gmall.manager.SkuEsService;
 import com.atguigu.gmall.manager.SkuService;
 import com.atguigu.gmall.manager.constant.RedisCacheKeyConst;
 import com.atguigu.gmall.manager.es.SkuBaseAttrEsVo;
@@ -17,6 +19,7 @@ import com.atguigu.gmall.manager.spu.SpuSaleAttr;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
@@ -28,6 +31,8 @@ import java.util.UUID;
 @Slf4j
 @Service
 public class SkuServiceImpl implements SkuService {
+    @Reference
+    SkuEsService skuEsService;
     @Autowired
     BaseAttrInfoMapper baseAttrInfoMapper;
     @Autowired
@@ -163,13 +168,41 @@ public class SkuServiceImpl implements SkuService {
                 .eq("sku_id", skuId));
         List<SkuBaseAttrEsVo> result = new ArrayList<>();
         for (SkuAttrValue skuAttrValue : skuAttrValues) {
-            Integer valueId = skuAttrValue.getId();
+            //------------------------------
+            Integer valueId = skuAttrValue.getValueId();
             SkuBaseAttrEsVo vo = new SkuBaseAttrEsVo();
             vo.setValueId(valueId);
             result.add(vo);
         }
 
         return result;
+    }
+
+    /**
+     * 页面显示属性值功能，查询所有的属性值
+     * @param valueIds
+     * @return
+     */
+    @Override
+    public List<BaseAttrInfo> getBaseAttrInfoGroupByValueId(List<Integer> valueIds) {
+        return baseAttrInfoMapper.getBaseAttrInfoGroupByValueId(valueIds);
+    }
+
+    /**
+     * 增加商品热度
+     * @param skuId
+     */
+    @Async
+    @Override
+    public void incrSkuHotScore(Integer skuId) {
+        //拿到jedis客户端
+        Jedis jedis = jedisPool.getResource();
+        Long hincrBy = jedis.hincrBy(RedisCacheKeyConst.SKU_HOT_SCORE+skuId, skuId + "", 1);
+        if(hincrBy % 3 == 0){
+            System.out.println("hincrBy:"+hincrBy);
+            //更新ES的热度
+            skuEsService.updateHotScore(skuId,hincrBy);  //更新商品热度的小KEY ，更新为hincrBy
+        }
     }
 
 

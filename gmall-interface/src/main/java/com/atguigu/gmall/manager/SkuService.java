@@ -22,9 +22,22 @@ public interface SkuService {
      * @param skuId
      * @return
      */
-    SkuInfo getSkuInfoBySkuId(Integer skuId) throws InterruptedException, Exception;
+    SkuInfo getSkuInfoBySkuId(Integer skuId) throws Exception;//getSkuInfoBySkuId
 
     List<SkuAttrValueMappingTo> getSkuAttrValueMapping(Integer spuId);
 
     List<SkuBaseAttrEsVo> getSkuBaseAttrValueId(Integer skuId);
+
+    /**
+     * 页面显示属性值功能，查询所有的属性值
+     * @param valueIds
+     * @return
+     */
+    List<BaseAttrInfo> getBaseAttrInfoGroupByValueId(List<Integer> valueIds);
+
+    /**
+     * 增加商品热度
+     * @param skuId
+     */
+    void incrSkuHotScore(Integer skuId);
 }

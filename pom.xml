@@ -21,6 +21,15 @@
         <module>gmall-parent</module>
         <module>gmall-search-service</module>
         <module>gmall-search-web</module>
+        <module>gmall-cart-service</module>
+        <module>gmall-cart-web</module>
+        <module>gmall-order-service</module>
+        <module>gmall-order-web</module>
+        <module>gmall-passport-service</module>
+        <module>gmall-passport-web</module>
+        <module>gware-manage</module>
+        <module>rabbitmq-demo</module>
+
     </modules>
     <packaging>pom</packaging>
     <description>这是一个聚合工程</description>

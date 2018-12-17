@@ -220,6 +220,7 @@
 
 				<div class="box-attr-3">
 					<br/>
+
 					<div th:each="saleAttr:${skuInfo.skuAllSaveAttrAndValueTos}" class="box-attr-2 clear">
 						<dl>
 							<dt th:text="${saleAttr.saleAttrName}">选择颜色</dt>
@@ -253,8 +254,8 @@
 				<div class="box-btns clear">
 					<div class="box-btns-one">
 						<form id="itemForm" action="http://cart.gmall.com/addToCart" method="post">
-							<input type="text" name="num" id="" value="1"/>
-							<input type="hidden" name="skuId"/>
+							<input type="text" name="num" id="numInput" th:value="1"/>
+							<input type="hidden" id="skuIdInput" name="skuId" th:value="${skuInfo.id}"/>
 
 							<div class="box-btns-one1">
 
@@ -1017,8 +1018,12 @@
 <script src="/js/js.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     function addToCart() {
-        $("#itemForm").submit();
+        var skuId = $('#skuIdInput').val();
+        var num = $('#numInput').val();
+        var url = "http://cart.gmall.com/addToCart?skuId="+skuId+"&num="+num;
+		location.href=url;
     }
+
 </script>
 
 </html>
