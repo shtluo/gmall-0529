@@ -25,12 +25,7 @@ bigscreen-proxy
 
 生产环境---服务器地址
 
-                 服务器IP                	                  地址                  	    用户名/密码     	          备注          
-  10.217.22.75/（公网IP：111.7.74.22:8092）	http://111.7.74.22:8092/PuyangPlatform	root/Pyzhjr12#$	       银行端和政府端        
-   10.217.22.76/（公网IP：111.7.74.29:80） 	     wx.pyjrfw.com/wap.pyjrfw.com     	root/Pyzhjr12#$	app前端和展业助手前端，nginx负载均衡
-              10.217.22.78            	                                      	root/Pyzhjr12#$	        MySQL         
-   10.217.22.146（公网IP：111.7.74.34:80） 	            www.pyjrfw.com            	root/Pyzhjr12#$	   网站前端和app、展业助手后端    
-
+                 
 生产环境发布流程：
 
 1.首先登陆堡垒机VPN（https://111.6.98.20/vpn/user/portal/home）	用户名/密码：zhjr / Zhjr@123
